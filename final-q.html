@@ -351,16 +351,42 @@
       .quizOption-item.selected .quizOption-item-figure .no-img {
         transform: translate(6px, -6px);
       }
-      .quizOption-item.unselected .quizOption-item-figure {
+      .quizOption-item.unselected.quizOption-item-image
+        .quizOption-item-figure {
         transition: transform 0.2s ease;
       }
-      .quizOption-item.unselected .quizOption-item-figure:before {
+      .quizOption-item.unselected.quizOption-item-image
+        .quizOption-item-figure:before {
         transform: translateY(0);
       }
-      .quizOption-item.unselected .quizOption-item-figure:after {
+      .quizOption-item.unselected.quizOption-item-image
+        .quizOption-item-figure:after {
         transform: rotate(45deg) scale(0);
       }
-      .quizOption-item.unselected .quizOption-item-figure .overlay {
+      .quizOption-item.unselected.quizOption-item-image
+        .quizOption-item-figure
+        .overlay {
+        -webkit-animation-name: overlayFadeIn;
+        animation-name: overlayFadeIn;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        -webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
+      .quizOption-item.unselected.quizOption-item-image span {
+        opacity: 0.2;
+      }
+      .quizOption-item.unselected.quizOption-item-plain
+        .quizOption-item-figure {
+        transition: transform 0.2s ease;
+      }
+      .quizOption-item.unselected.quizOption-item-plain
+        .quizOption-item-figure
+        .overlay {
         -webkit-animation-name: overlayFadeIn;
         animation-name: overlayFadeIn;
         -webkit-animation-duration: 0.5s;
